@@ -7,7 +7,7 @@ const Home = () => {
         <div className={styles.postHeader}>
           <div className={styles.postAvatar}>
             <img
-              src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+              src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png"
               alt="user-pic"
             />
             <div>
@@ -20,7 +20,7 @@ const Home = () => {
           <div className={styles.postActions}>
             <div className={styles.postLike}>
               <img
-                src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
+                src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                 alt="likes-icon"
               />
               <span>5</span>
@@ -28,7 +28,7 @@ const Home = () => {
 
             <div className={styles.postCommentsIcon}>
               <img
-                src="https://image.flaticon.com/icons/svg/1380/1380338.svg"
+                src="https://cdn-icons-png.flaticon.com/512/1947/1947247.png"
                 alt="comments-icon"
               />
               <span>2</span>
