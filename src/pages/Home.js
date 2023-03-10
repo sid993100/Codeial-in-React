@@ -1,3 +1,4 @@
+import propTyes from 'prop-types'
 import styles from '../styles/home.module.css';
 
 const Home = ({ posts }) => {
@@ -56,5 +57,9 @@ const Home = ({ posts }) => {
     </div>
   );
 };
+
+Home.propTyes={
+  posts: propTyes.array.isRequired,
+}
 
 export default Home;
