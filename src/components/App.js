@@ -2,34 +2,34 @@ import { useEffect, useState } from 'react';
 
 import { getPosts } from '../api';
 import { Home } from '../pages';
-import Loader from './Loader';
+import { Loader, Navbar } from './';
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetchPosts = async () => {
       const response = await getPosts();
-      // console.log('response', response);
-      if(response.success){
+
+      if (response.success) {
         setPosts(response.data.posts);
       }
 
       setLoading(false);
     };
 
-    //call fetch post
-    fetchPost();
+    fetchPosts();
   }, []);
 
-  if(loading){
-    return <Loader />
+  if (loading) {
+    return <Loader />;
   }
 
   return (
     <div className="App">
-      <Home posts={posts}/>
+      <Navbar />
+      <Home posts={posts} />
     </div>
   );
 }
